@@ -289,7 +289,7 @@
     <!-- RESULTS -->
     <div class="results" id="results">
       <div class="headline" id="hlProfit">
-        <div class="k" id="profitLabel">OtanO利益（金据置時）</div>
+        <div class="k" id="profitLabel">OtanO利益</div>
         <div class="v" id="profitVal">—</div>
         <div class="sub" id="profitSub">—</div>
       </div>
@@ -303,7 +303,7 @@
 
       <p class="foot">
         計算式：素材費 = 純金単価 × 重量 × 純度 × ロス係数。
-        実効原価（バッファ込み）を基準に粗利を算定し、金が動かなければバッファ分はOtanOに残ります。
+        金価格変動のリスクがOtanOのみにかかるのか、販売SHOPもリスクを許容してくれるのかご確認を。
         あくまで概算です。最終重量は鋳造後の実測でご確認を。
       </p>
     </div>
@@ -424,7 +424,7 @@
       wb.innerHTML = "⚠ 売値が原価を下回っています。この価格では作るほど損失が出ます。売値を上げるか、重量・仕様を見直してください。";
     } else if(costRatio > 0.70){
       wb.style.display = "block";
-      wb.innerHTML = "原価が売値の"+pct(costRatio)+"を占めています（70%超）。委託手数料を上乗せする余地が乏しいので、価格の見直しか特別コミッションのご検討を。";
+      wb.innerHTML = "原価が売値の"+pct(costRatio)+"を占めています（70%超）。金価格によっては利益確保は困難、価格の見直しのご検討を。";
     } else {
       wb.style.display = "none";
     }
