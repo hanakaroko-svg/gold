@@ -1,481 +1,241 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0070)file:///Users/nakazawahinako/Downloads/otano-price-presentation_1.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>18K 原価・粗利ワークシート — OtanO</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<title>OtanO｜カスタムオーダー 価格のご提示</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./OtanO｜カスタムオーダー 価格のご提示_files/css2" rel="stylesheet">
 <style>
   :root{
-    --paper:#FAF7F1;
-    --panel:#F2ECE0;
-    --ink:#211C17;
-    --ink-soft:#6B6155;
-    --line:#E2DACB;
-    --line-strong:#CDC2AD;
-    --gold:#9C7A2E;
-    --gold-soft:#C9A24B;
-    --slate:#5A6660;
-    --good:#4E6B4A;
-    --warn:#A6402F;
-    --shop:#8A7B5C;
+    --paper:#FAF7F1;--panel:#F2ECE0;--ink:#211C17;--ink-soft:#6B6155;
+    --line:#E2DACB;--line-strong:#CDC2AD;--gold:#9C7A2E;--slate:#5A6660;--brand2:#8A7B5C;
   }
   *{box-sizing:border-box;}
   html,body{margin:0;}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:"Inter",system-ui,-apple-system,sans-serif;
-    font-feature-settings:"tnum" 1;
-    line-height:1.5;
-    padding:clamp(16px,4vw,40px);
-  }
-  .sheet{max-width:1040px;margin:0 auto;}
-  header.top{
-    border-bottom:1px solid var(--line-strong);
-    padding-bottom:18px;margin-bottom:26px;
-    display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;
-  }
-  .eyebrow{
-    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-    color:var(--gold);font-weight:600;margin:0 0 6px;
-  }
-  h1{
-    font-family:"Fraunces",Georgia,serif;
-    font-weight:500;font-size:clamp(26px,4.4vw,38px);
-    margin:0;letter-spacing:-.01em;line-height:1.05;
-  }
-  .lede{color:var(--ink-soft);font-size:13px;max-width:34ch;margin:8px 0 0;}
-  .live-note{
-    font-size:12px;color:var(--ink-soft);text-align:right;line-height:1.6;
-  }
-  .live-note a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line-strong);}
-  .live-note a:hover{border-color:var(--gold);}
+  body{background:var(--paper);color:var(--ink);font-family:"Inter",system-ui,-apple-system,sans-serif;
+    font-feature-settings:"tnum" 1;line-height:1.55;padding:clamp(16px,4vw,40px);}
+  .sheet{max-width:680px;margin:0 auto;}
 
-  .grid{display:grid;grid-template-columns:minmax(0,0.86fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);}
-  @media(max-width:760px){.grid{grid-template-columns:1fr;}}
-
-  .group{margin-bottom:22px;}
-  .group h2{
-    font-family:"Fraunces",serif;font-weight:500;font-size:14px;
-    letter-spacing:.02em;margin:0 0 12px;
-    display:flex;align-items:center;gap:10px;color:var(--ink);
-  }
-  .group h2::after{content:"";flex:1;height:1px;background:var(--line);}
-
-  .field{margin-bottom:13px;}
-  .field > label{
-    display:block;font-size:12px;color:var(--ink-soft);margin-bottom:4px;font-weight:500;
-  }
-  .inputwrap{position:relative;display:flex;align-items:center;}
-  .inputwrap .unit{
-    position:absolute;right:12px;font-size:12px;color:var(--ink-soft);pointer-events:none;
-  }
-  .inputwrap .cur{
-    position:absolute;left:12px;font-size:13px;color:var(--ink-soft);pointer-events:none;
-  }
-  input[type=number]{
-    width:100%;border:1px solid var(--line-strong);background:#fff;
-    border-radius:7px;padding:10px 12px;font-family:inherit;font-size:15px;
-    color:var(--ink);font-feature-settings:"tnum" 1;transition:border-color .15s,box-shadow .15s;
-  }
-  input.hascur{padding-left:26px;}
-  input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(156,122,46,.12);}
-  input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}
+  /* Editor (OtanO only) */
+  .editor{border:1px dashed var(--line-strong);border-radius:12px;padding:16px 18px;margin-bottom:26px;background:rgba(255,255,255,.5);}
+  .editor .tag{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 4px;}
+  .editor .tagsub{font-size:11px;color:var(--ink-soft);margin:0 0 14px;}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;}
+  @media(max-width:560px){.frow{grid-template-columns:1fr;}}
+  .f{margin-bottom:2px;} .f.full{grid-column:1 / -1;}
+  .f label{display:block;font-size:11.5px;color:var(--ink-soft);margin-bottom:3px;font-weight:500;}
+  .iw{position:relative;display:flex;align-items:center;}
+  .iw .cur{position:absolute;left:11px;font-size:12px;color:var(--ink-soft);pointer-events:none;}
+  .iw .unit{position:absolute;right:11px;font-size:11px;color:var(--ink-soft);pointer-events:none;}
+  input,select{width:100%;border:1px solid var(--line-strong);background:#fff;border-radius:7px;padding:9px 11px;
+    font-family:inherit;font-size:14px;color:var(--ink);font-feature-settings:"tnum" 1;transition:border-color .15s,box-shadow .15s;}
+  input.pl{padding-left:24px;}
+  input:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(156,122,46,.12);}
+  input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}
   input[type=number]{-moz-appearance:textfield;}
-
-  .presets{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;}
-  .chip{
-    font:inherit;font-size:11px;color:var(--ink-soft);cursor:pointer;
-    background:transparent;border:1px solid var(--line-strong);border-radius:20px;
-    padding:3px 11px;transition:all .15s;
-  }
-  .chip:hover{border-color:var(--gold);color:var(--gold);}
-  .chip:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
-
-  .fetchrow{display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap;}
-  .fetchbtn{
-    font:inherit;font-size:11px;font-weight:500;color:var(--gold);cursor:pointer;
-    background:transparent;border:1px solid var(--line-strong);border-radius:20px;padding:4px 12px;transition:all .15s;
-  }
+  .fetchrow{display:flex;align-items:center;gap:9px;margin-top:6px;flex-wrap:wrap;}
+  .fetchbtn{font:inherit;font-size:10.5px;font-weight:500;color:var(--gold);cursor:pointer;background:transparent;border:1px solid var(--line-strong);border-radius:20px;padding:3px 10px;}
   .fetchbtn:hover{border-color:var(--gold);}
-  .fetchbtn:disabled{opacity:.5;cursor:default;}
-  .fetchout{font-size:11.5px;color:var(--ink-soft);line-height:1.5;}
-  .fetchout.ok{color:var(--ink);}
-  .fetchout.err{color:var(--warn);}
-  .fetchout a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line-strong);}
-  .fetchout a:hover{border-color:var(--gold);}
+  .fetchout{font-size:11px;color:var(--ink-soft);} .fetchout.ok{color:var(--ink);} .fetchout.err{color:#A6402F;}
+  .fetchout a{color:var(--gold);}
+  .linkbox{margin-top:16px;border-top:1px solid var(--line);padding-top:14px;}
+  .linkbox label{display:block;font-size:11.5px;color:var(--ink-soft);font-weight:600;margin-bottom:6px;}
+  .linkrow{display:flex;gap:8px;}
+  .linkrow input{font-size:12px;color:var(--ink-soft);background:#fff;}
+  .copybtn{white-space:nowrap;font:inherit;font-size:12px;font-weight:500;color:#fff;background:var(--ink);border:none;border-radius:7px;padding:0 16px;cursor:pointer;}
+  .copybtn:hover{background:#000;}
+  .linkhint{font-size:11px;color:var(--ink-soft);margin-top:8px;line-height:1.5;}
 
-  .modewrap{display:flex;gap:0;border:1px solid var(--line-strong);border-radius:8px;overflow:hidden;margin-bottom:6px;}
-  .modewrap button{
-    flex:1;font:inherit;font-size:12px;font-weight:500;padding:8px;cursor:pointer;
-    background:#fff;border:none;color:var(--ink-soft);transition:all .15s;
-  }
-  .modewrap button[aria-pressed=true]{background:var(--ink);color:var(--paper);}
-  .modehint{font-size:11px;color:var(--ink-soft);margin:0 0 12px;line-height:1.5;}
-
-  /* Results */
-  .results{
-    background:var(--panel);border:1px solid var(--line);border-radius:12px;
-    padding:clamp(18px,2.4vw,26px);position:sticky;top:20px;
-  }
-  @media(max-width:760px){.results{position:static;}}
-  .headline{margin-bottom:18px;}
-  .headline .k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
-  .headline .v{
-    font-family:"Fraunces",serif;font-weight:600;font-size:clamp(30px,5.4vw,46px);
-    line-height:1;margin-top:4px;letter-spacing:-.01em;
-  }
-  .headline .sub{font-size:12.5px;color:var(--ink-soft);margin-top:6px;}
-  .neg .v{color:var(--warn);}
-  .pos .v{color:var(--ink);}
-
-  .bar{height:34px;border-radius:6px;overflow:hidden;display:flex;margin:4px 0 8px;background:#e9e2d4;box-shadow:inset 0 0 0 1px var(--line);}
+  /* Quote (shop-facing) */
+  .quote{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:clamp(22px,4vw,34px);}
+  .brand{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+  .qtitle{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:clamp(20px,3.5vw,26px);margin:6px 0 2px;letter-spacing:-.01em;}
+  .qitem{font-size:14px;color:var(--ink-soft);margin-bottom:20px;} .qitem b{color:var(--ink);font-weight:500;}
+  .spec{display:flex;flex-wrap:wrap;gap:8px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:20px;}
+  .spec .cell{flex:1;min-width:110px;}
+  .spec .k{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+  .spec .v{font-size:15px;font-weight:500;margin-top:2px;}
+  table.bd{width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:6px;}
+  table.bd td{padding:8px 0;border-bottom:1px solid var(--line);}
+  table.bd td.r{text-align:right;font-variant-numeric:tabular-nums;font-weight:500;}
+  table.bd tr.sum td{border-top:1px solid var(--line);border-bottom:none;color:var(--ink-soft);font-size:12.5px;}
+  table.bd td small{color:var(--ink-soft);font-size:11px;display:block;font-weight:400;margin-top:1px;}
+  .bar{height:28px;border-radius:6px;overflow:hidden;display:flex;margin:12px 0 6px;background:#e9e2d4;box-shadow:inset 0 0 0 1px var(--line);}
   .bar span{display:block;height:100%;transition:width .3s ease;}
-  .seg-mat{background:var(--gold);}
-  .seg-other{background:var(--slate);}
-  .seg-shop{background:var(--shop);}
-  .seg-profit{background:var(--good);}
-  .seg-neg{background:var(--warn);}
-  .legend{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:11.5px;color:var(--ink-soft);margin-bottom:18px;}
+  .seg-gold{background:var(--gold);} .seg-cost{background:var(--slate);} .seg-design{background:var(--brand2);}
+  .legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:11px;color:var(--ink-soft);margin-bottom:22px;}
   .legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:middle;}
-
-  table.detail{width:100%;border-collapse:collapse;font-size:13.5px;}
-  table.detail td{padding:7px 0;border-bottom:1px solid var(--line);}
-  table.detail td.r{text-align:right;font-variant-numeric:tabular-nums;font-weight:500;}
-  table.detail tr:last-child td{border-bottom:none;}
-  table.detail tr.total td{border-top:1px solid var(--line-strong);border-bottom:none;padding-top:10px;font-weight:600;}
-  table.detail tr.total td:first-child{font-family:"Fraunces",serif;}
-  table.detail tr.sub td{color:var(--ink-soft);font-size:12.5px;padding-top:2px;padding-bottom:2px;border-bottom:none;}
-  .pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;margin-left:8px;}
-  .pill.ok{background:rgba(78,107,74,.14);color:var(--good);}
-  .pill.hot{background:rgba(166,64,47,.13);color:var(--warn);}
-  .warnbox{
-    margin-top:14px;font-size:12.5px;color:var(--warn);
-    background:rgba(166,64,47,.07);border:1px solid rgba(166,64,47,.25);
-    border-radius:8px;padding:10px 12px;line-height:1.5;
-  }
-  .foot{margin-top:22px;font-size:11.5px;color:var(--ink-soft);line-height:1.6;border-top:1px solid var(--line);padding-top:14px;}
-  .foot code{background:#fff;border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:11px;}
+  .price{border-top:1px solid var(--line-strong);padding-top:18px;}
+  .price .k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+  .price .v{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(32px,6vw,46px);line-height:1.05;margin-top:4px;letter-spacing:-.01em;}
+  .price .tax{font-size:12px;color:var(--ink-soft);margin-top:4px;}
+  .note{margin-top:20px;font-size:12px;color:var(--ink-soft);line-height:1.65;border-top:1px solid var(--line);padding-top:16px;}
+  .note b{color:var(--ink);font-weight:600;}
 </style>
 </head>
 <body>
 <div class="sheet">
-  <header class="top">
-    <div>
-      <p class="eyebrow">OtanO · Atelier Worksheet</p>
-      <h1>18K 原価・粗利ワークシート</h1>
-      <p class="lede">純金グラム単価を入れると、18金の素材費・実効原価・粗利がその場で出ます。</p>
-    </div>
-    <p class="live-note">
-      金価は毎日動きます。当日値は<br>
-      <a href="https://gold.tanaka.co.jp/commodity/souba/" target="_blank" rel="noopener">田中貴金属</a> でご確認を。<br>
-      入力するのは<strong>純金（K24）</strong>のグラム単価です。
-    </p>
-  </header>
 
-  <div class="grid">
-    <!-- INPUTS -->
-    <div class="inputs">
-      <div class="group">
-        <h2>地金</h2>
-        <div class="field">
-          <label for="gold">純金グラム単価</label>
-          <div class="inputwrap">
-            <span class="cur" data-cur>¥</span>
-            <input id="gold" class="hascur" type="number" value="25000" min="0" step="10">
-            <span class="unit">/ g</span>
-          </div>
-          <div class="fetchrow">
-            <button type="button" id="fetchBtn" class="fetchbtn">スポット金価を更新</button>
-            <span id="fetchOut" class="fetchout">読み込み中…</span>
-          </div>
-        </div>
-        <div class="field">
-          <label for="weight">商品重量（18KWG 仕上がり）</label>
-          <div class="inputwrap">
-            <input id="weight" type="number" value="100" min="0" step="0.1">
-            <span class="unit">g</span>
-          </div>
-          <div class="presets">
-            <button class="chip" data-set="weight" data-val="90">90g（Kusuma）</button>
-            <button class="chip" data-set="weight" data-val="100">100g</button>
-          </div>
-        </div>
-        <div class="field">
-          <label for="purity">純度（18K = 75%）</label>
-          <div class="inputwrap">
-            <input id="purity" type="number" value="75.5" min="0" max="100" step="0.1">
-            <span class="unit">%</span>
-          </div>
-          <div class="presets">
-            <button class="chip" data-set="purity" data-val="75.0">75.0%</button>
-            <button class="chip" data-set="purity" data-val="75.5">75.5%（工場基準）</button>
-          </div>
-        </div>
-        <div class="field">
-          <label for="loss">鋳造ロス・仕入係数・金素材購入手数料</label>
-          <div class="inputwrap">
-            <input id="loss" type="number" value="1.15" min="1" step="0.01">
-            <span class="unit">×</span>
-          </div>
-        </div>
+  <div class="editor" id="editor" style="">
+    <p class="tag">Setup — OtanO専用</p>
+    <p class="tagsub">数値を入れると、下の「ショップに送るリンク」が自動で更新されます。そのリンクを送ると、相手には入力欄のない見積だけが表示され、書き換えできません。</p>
+    <div class="frow">
+      <div class="f full"><label for="item">品目名</label><input id="item" type="text" value="Kusuma Necklace ／ 別注"></div>
+      <div class="f"><label for="material">素材</label><input id="material" type="text" value="K18WG（ホワイトゴールド）"></div>
+      <div class="f"><label for="weight">重量（18金）</label><div class="iw"><input id="weight" type="number" value="110" min="0" step="1"><span class="unit">g</span></div></div>
+      <div class="f">
+        <label for="gold">純金グラム単価</label>
+        <div class="iw"><span class="cur">¥</span><input id="gold" class="pl" type="number" value="23000" min="0" step="10"><span class="unit">/g</span></div>
+        <div class="fetchrow"><button type="button" id="fetchBtn" class="fetchbtn">相場を取得</button><span id="fetchOut" class="fetchout err"><a href="https://gold.tanaka.co.jp/commodity/souba/" target="_blank" rel="noopener">田中で確認</a>して入力</span></div>
       </div>
-
-      <div class="group">
-        <h2>加工・諸費</h2>
-        <div class="field">
-          <label for="labor">工賃（鋳造・研磨・エナメル・石留め・メッキ等）</label>
-          <div class="inputwrap">
-            <span class="cur" data-cur>¥</span>
-            <input id="labor" class="hascur" type="number" value="150000" min="0" step="1000">
-          </div>
-        </div>
-        <div class="field">
-          <label for="misc">天然石代・送料・保険・マテリアルテスト・雑費</label>
-          <div class="inputwrap">
-            <span class="cur" data-cur>¥</span>
-            <input id="misc" class="hascur" type="number" value="76000" min="0" step="1000">
-          </div>
-        </div>
-        <div class="field">
-          <label for="buffer">金価変動バッファ（素材費に上乗せ）500円/g変動で5万近く変動</label>
-          <div class="inputwrap">
-            <input id="buffer" type="number" value="10" min="0" step="1">
-            <span class="unit">%</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="group">
-        <h2>価格</h2>
-        <div class="field">
-          <label>取引モード</label>
-          <div class="modewrap" role="group" aria-label="取引モード">
-            <button type="button" id="mWholesale" aria-pressed="true">卸値（受取固定）</button>
-            <button type="button" id="mConsign" aria-pressed="false">委託（粗利分配）</button>
-          </div>
-          <p class="modehint" id="modehint">卸値モード：入力額はOtanOの受取。上代はショップ裁量。</p>
-        </div>
-        <div class="field">
-          <label for="sale" id="saleLabel">売値／受取額</label>
-          <div class="inputwrap">
-            <span class="cur" data-cur>¥</span>
-            <input id="sale" class="hascur" type="number" value="3900000" min="0" step="10000">
-          </div>
-        </div>
-        <div class="field" id="shopField" style="display:none;">
-          <label for="shop">ショップ取り分（粗利の%）</label>
-          <div class="inputwrap">
-            <input id="shop" type="number" value="30" min="0" max="100" step="1">
-            <span class="unit">%</span>
-          </div>
-        </div>
-        <div class="field">
-          <label for="curSel">通貨</label>
-          <div class="inputwrap">
-            <select id="curSel" style="width:100%;border:1px solid var(--line-strong);background:#fff;border-radius:7px;padding:10px 12px;font:inherit;font-size:14px;color:var(--ink);">
-              <option value="¥" selected>¥（円）</option>
-              <option value="元">元（RMB）</option>
-              <option value="$">$（USD）</option>
-            </select>
-          </div>
-        </div>
+      <div class="f"><label for="labor">工賃</label><div class="iw"><span class="cur">¥</span><input id="labor" class="pl" type="number" value="130000" min="0" step="1000"></div></div>
+      <div class="f"><label for="misc">送料・保険・マテリアルテスト・雑費</label><div class="iw"><span class="cur">¥</span><input id="misc" class="pl" type="number" value="36000" min="0" step="1000"></div></div>
+      <div class="f"><label for="price">ご提示価格</label><div class="iw"><span class="cur">¥</span><input id="price" class="pl" type="number" value="4280000" min="0" step="10000"></div></div>
+      <div class="f"><label for="pricelabel">価格の名目</label>
+        <select id="pricelabel">
+          <option value="0" selected="">卸値（OtanOお支払い額）</option>
+          <option value="1">ご提示価格</option>
+          <option value="2">定価（店頭価格）</option>
+        </select>
       </div>
     </div>
-
-    <!-- RESULTS -->
-    <div class="results" id="results">
-      <div class="headline" id="hlProfit">
-        <div class="k" id="profitLabel">OtanO利益金据置時）</div>
-        <div class="v" id="profitVal">—</div>
-        <div class="sub" id="profitSub">—</div>
+    <div class="linkbox">
+      <label for="sharelink">ショップに送るリンク</label>
+      <div class="linkrow">
+        <input id="sharelink" type="text" readonly="">
+        <button type="button" class="copybtn" id="copyBtn">コピー</button>
       </div>
-
-      <div class="bar" id="bar" aria-hidden="true"></div>
-      <div class="legend" id="legend"></div>
-
-      <table class="detail" id="detail"></table>
-
-      <div class="warnbox" id="warnbox" style="display:none;"></div>
-
-      <p class="foot">
-        計算式：素材費 = 純金単価 × 重量 × 純度 × ロス係数。
-        金価格変動のリスクがOtanOのみにかかるのか、販売SHOPもリスクを許容してくれるのかご確認を。
-        あくまで概算です。最終重量は鋳造後の実測でご確認を。
-      </p>
+      <p class="linkhint">このリンクを開くと入力欄は表示されません（この画面はOtanOだけのものです）。GitHub Pagesに置いたうえでリンクを送ってください。</p>
     </div>
+  </div>
+
+  <div class="quote">
+    <div class="brand">OtanO</div>
+    <div class="qtitle">カスタムオーダー 価格のご提示</div>
+    <div class="qitem" id="qItem"><b>Kusuma Necklace ／ 別注</b></div>
+    <div class="spec">
+      <div class="cell"><div class="k">素材</div><div class="v" id="sMaterial">K18WG（ホワイトゴールド）</div></div>
+      <div class="cell"><div class="k">重量</div><div class="v" id="sWeight">110 g</div></div>
+      <div class="cell"><div class="k">金相場</div><div class="v" id="sGold">純金 ¥23,000/g・2026/7/15</div></div>
+    </div>
+    <table class="bd" id="bd"><tbody><tr><td>素材費（18金地金）<small>純金相当分・鋳造ロス込み。金相場により変動します</small></td><td class="r">¥2,158,470</td></tr><tr><td>工賃<small>鋳造・エナメル・石留め・メッキ 等</small></td><td class="r">¥130,000</td></tr><tr><td>送料・保険・マテリアルテスト・雑費</td><td class="r">¥36,000</td></tr><tr class="sum"><td>実費合計</td><td class="r">¥2,324,470</td></tr><tr><td>オリジナルデザイン・別注対応・ブランド価値</td><td class="r">¥1,955,531</td></tr></tbody></table>
+    <div class="bar" id="bar" aria-hidden="true"><span class="seg-gold" style="width:50.43153037383178%"></span><span class="seg-cost" style="width:3.878504672897196%"></span><span class="seg-design" style="width:45.68996495327103%"></span></div>
+    <div class="legend" id="legend"><span><i class="seg-gold"></i>地金 50%</span><span><i class="seg-cost"></i>工賃・諸費 4%</span><span><i class="seg-design"></i>デザイン・別注・ブランド 46%</span></div>
+    <div class="price">
+      <div class="k" id="pLabel">卸値</div>
+      <div class="v" id="qPrice">¥4,280,000</div>
+      <div class="tax">表示は税別です。</div>
+    </div>
+    <div class="note" id="qNote">本価格は、18金の地金・工賃・諸費に、オリジナルデザインと別注対応・ブランド価値を含めたものです。金相場は日々変動するため、<b>本お見積りはご提示日から3営業日間有効</b>とさせていただきます。ご入金確認後すみやかに地金を確保いたしますので、その後に金相場が高騰しても<b>追加のご請求は発生いたしません</b>。</div>
   </div>
 </div>
 
 <script>
 (function(){
-  var $ = function(id){ return document.getElementById(id); };
-  var ids = ["gold","weight","purity","loss","labor","misc","buffer","sale","shop"];
-  var mode = "wholesale";
-  var cur = "¥";
+  var $=function(i){return document.getElementById(i);};
+  var PURITY=0.755, LOSS=1.13;
+  var LABELS=["卸値（OtanOお支払い額）","ご提示価格","定価（店頭価格）"];
+  var LABELS_SHORT=["卸値","ご提示価格","定価"];
+  function yen(n){if(!isFinite(n))n=0;return "¥"+Math.round(n).toLocaleString("ja-JP");}
+  function pctOf(a,b){if(!b)return "0%";return Math.round(a/b*100)+"%";}
 
-  function fmt(n){
-    if(!isFinite(n)) n = 0;
-    var neg = n < 0;
-    var s = Math.round(Math.abs(n)).toLocaleString("ja-JP");
-    return (neg ? "−" : "") + cur + s;
+  function renderQuote(v){
+    var material=v.gold*v.weight*PURITY*LOSS;
+    var realCost=material+v.labor+v.misc;
+    var design=Math.max(0, v.price-realCost);
+    $("qItem").innerHTML="<b>"+(v.item||"—")+"</b>";
+    $("sMaterial").textContent=v.material||"—";
+    $("sWeight").textContent=v.weight?v.weight+" g":"—";
+    $("sGold").textContent=v.gold?("純金 "+yen(v.gold)+"/g"+(v.date?("・"+v.date):"")):"—";
+
+    $("bd").innerHTML=
+      '<tr><td>素材費（18金地金）<small>純金相当分・鋳造ロス込み。金相場により変動します</small></td><td class="r">'+yen(material)+'</td></tr>'+
+      '<tr><td>工賃<small>鋳造・エナメル・石留め・メッキ 等</small></td><td class="r">'+yen(v.labor)+'</td></tr>'+
+      '<tr><td>送料・保険・マテリアルテスト・雑費</td><td class="r">'+yen(v.misc)+'</td></tr>'+
+      '<tr class="sum"><td>実費合計</td><td class="r">'+yen(realCost)+'</td></tr>'+
+      '<tr><td>オリジナルデザイン・別注対応・ブランド価値</td><td class="r">'+yen(design)+'</td></tr>';
+
+    var base=v.price>0?v.price:1;
+    $("bar").innerHTML=
+      '<span class="seg-gold" style="width:'+Math.min(100,material/base*100)+'%"></span>'+
+      '<span class="seg-cost" style="width:'+Math.min(100,(v.labor+v.misc)/base*100)+'%"></span>'+
+      '<span class="seg-design" style="width:'+Math.min(100,design/base*100)+'%"></span>';
+    $("legend").innerHTML=
+      '<span><i class="seg-gold"></i>地金 '+pctOf(material,base)+'</span>'+
+      '<span><i class="seg-cost"></i>工賃・諸費 '+pctOf(v.labor+v.misc,base)+'</span>'+
+      '<span><i class="seg-design"></i>デザイン・別注・ブランド '+pctOf(design,base)+'</span>';
+
+    $("pLabel").textContent=LABELS_SHORT[v.label]||"ご提示価格";
+    $("qPrice").textContent=yen(v.price);
+    $("qNote").innerHTML=
+      "本価格は、18金の地金・工賃・諸費に、オリジナルデザインと別注対応・ブランド価値を含めたものです。"+
+      "金相場は日々変動するため、<b>本お見積りはご提示日から3営業日間有効</b>とさせていただきます。"+
+      "ご入金確認後すみやかに地金を確保いたしますので、その後に金相場が高騰しても<b>追加のご請求は発生いたしません</b>。";
   }
-  function pct(n){ if(!isFinite(n)) n=0; return (n*100).toFixed(1) + "%"; }
 
-  function setMode(m){
-    mode = m;
-    var w = m === "wholesale";
-    $("mWholesale").setAttribute("aria-pressed", w ? "true":"false");
-    $("mConsign").setAttribute("aria-pressed", w ? "false":"true");
-    $("shopField").style.display = w ? "none" : "block";
-    $("saleLabel").textContent = w ? "売値／受取額（OtanO受取）" : "店頭売価";
-    $("modehint").textContent = w
-      ? "卸値モード：入力額はOtanOの受取。上代はショップ裁量で、粗利はまるごとOtanOに残ります。"
-      : "委託モード：入力額は店頭売価。粗利からショップ取り分を引いた額がOtanOの利益です。";
-    calc();
+  function readInputs(){
+    return {
+      item:$("item").value.trim(), material:$("material").value.trim(),
+      weight:+$("weight").value||0, gold:+$("gold").value||0,
+      labor:+$("labor").value||0, misc:+$("misc").value||0,
+      price:+$("price").value||0, label:+$("pricelabel").value||0,
+      date:new Date().toLocaleDateString("ja-JP")
+    };
+  }
+  function buildLink(v){
+    var base=(location.origin&&location.origin!=="null"?location.origin:"")+location.pathname;
+    var p=new URLSearchParams();
+    p.set("i",v.item);p.set("m",v.material);p.set("w",v.weight);p.set("g",v.gold);
+    p.set("lb",v.labor);p.set("mc",v.misc);p.set("p",v.price);p.set("l",v.label);p.set("d",v.date);
+    return base+"?"+p.toString();
   }
 
-  function calc(){
-    var G = +$("gold").value || 0;
-    var W = +$("weight").value || 0;
-    var P = (+$("purity").value || 0)/100;
-    var L = +$("loss").value || 0;
-    var Lb = +$("labor").value || 0;
-    var M = +$("misc").value || 0;
-    var B = (+$("buffer").value || 0)/100;
-    var S = +$("sale").value || 0;
-    var Sh = (+$("shop").value || 0)/100;
-
-    var material = G * W * P * L;
-    var bufferAmt = material * B;
-    var costBufferless = material + Lb + M;          // 金据置時の実効原価
-    var costWithBuffer = material + bufferAmt + Lb + M; // バッファ込み実効原価
-
-    var gpSpike = S - costWithBuffer;   // 金高騰時の粗利（before shop）
-    var gpStable = S - costBufferless;  // 金据置時の粗利（before shop）
-
-    var shopCut = mode === "wholesale" ? 0 : Math.max(0, gpSpike) * Sh;
-    // shop cut computed on buffer-included gross profit (fixed regardless of gold outcome)
-    if(mode !== "wholesale") shopCut = gpSpike * Sh;
-
-    var otanoSpike = gpSpike - shopCut;
-    var otanoStable = gpStable - shopCut;
-
-    var costRatio = S > 0 ? costWithBuffer / S : 0;
-    var markup = costWithBuffer > 0 ? S / costWithBuffer : 0;
-    var marginStable = S > 0 ? otanoStable / S : 0;
-    var marginSpike = S > 0 ? otanoSpike / S : 0;
-
-    // Headline
-    var hl = $("hlProfit");
-    $("profitVal").textContent = fmt(otanoStable);
-    $("profitLabel").textContent = "OtanO利益（金据置時）";
-    $("profitSub").innerHTML = "利益率 " + pct(marginStable)
-      + " ／ 金高騰時 " + fmt(otanoSpike) + "（" + pct(marginSpike) + "）";
-    hl.className = "headline " + (otanoStable < 0 ? "neg" : "pos");
-
-    // Bar (share of sale price)
-    var base = S > 0 ? S : 1;
-    var otherCost = bufferAmt + Lb + M;
-    function w(x){ return Math.max(0, Math.min(100, x / base * 100)); }
-    var bar = $("bar");
-    if(otanoStable < 0){
-      bar.innerHTML = '<span class="seg-neg" style="width:100%"></span>';
-    } else {
-      bar.innerHTML =
-        '<span class="seg-mat" style="width:'+w(material)+'%"></span>' +
-        '<span class="seg-other" style="width:'+w(otherCost)+'%"></span>' +
-        (shopCut>0 ? '<span class="seg-shop" style="width:'+w(shopCut)+'%"></span>' : '') +
-        '<span class="seg-profit" style="width:'+w(otanoStable)+'%"></span>';
-    }
-    var legend = $("legend");
-    legend.innerHTML =
-      '<span><i class="seg-mat" style="background:var(--gold)"></i>素材費 '+pct(material/base)+'</span>' +
-      '<span><i class="seg-other" style="background:var(--slate)"></i>その他原価 '+pct(otherCost/base)+'</span>' +
-      (shopCut>0 ? '<span><i class="seg-shop" style="background:var(--shop)"></i>ショップ '+pct(shopCut/base)+'</span>' : '') +
-      '<span><i class="seg-profit" style="background:var(--good)"></i>OtanO利益 '+pct(Math.max(0,otanoStable)/base)+'</span>';
-
-    // Detail table
-    var ratioPill = costRatio > 0.70
-      ? '<span class="pill hot">売値の '+pct(costRatio)+'</span>'
-      : '<span class="pill ok">売値の '+pct(costRatio)+'</span>';
-    var rows = "";
-    rows += row("素材費（地金）", fmt(material));
-    if(bufferAmt>0) rows += rowSub("うち金価バッファ +"+$("buffer").value+"%", fmt(bufferAmt));
-    rows += row("工賃", fmt(Lb));
-    rows += row("送料・保険・マテリアルテスト・雑費", fmt(M));
-    rows += rowTotal("実効原価（バッファ込み）"+ratioPill, fmt(costWithBuffer));
-    rows += row("粗利（金据置時）", fmt(gpStable));
-    if(mode !== "wholesale"){
-      rows += row("ショップ取り分", fmt(shopCut));
-      rows += row("OtanO利益（金据置時）", fmt(otanoStable));
-      rows += rowSub("OtanO利益（金高騰時）", fmt(otanoSpike));
-    }
-    rows += rowSub("対原価マークアップ", (markup? markup.toFixed(2):"—")+"×");
-    $("detail").innerHTML = rows;
-
-    // Warnings
-    var wb = $("warnbox");
-    if(otanoStable < 0){
-      wb.style.display = "block";
-      wb.innerHTML = "⚠ 売値が原価を下回っています。この価格では作るほど損失が出ます。売値を上げるか、重量・仕様を見直してください。";
-    } else if(costRatio > 0.70){
-      wb.style.display = "block";
-      wb.innerHTML = "原価が売値の"+pct(costRatio)+"を占めています（70%超）。金価格によっては利益確保は困難、価格の見直しのご検討を。";
-    } else {
-      wb.style.display = "none";
-    }
-  }
-  function row(k,v){ return '<tr><td>'+k+'</td><td class="r">'+v+'</td></tr>'; }
-  function rowSub(k,v){ return '<tr class="sub"><td>'+k+'</td><td class="r">'+v+'</td></tr>'; }
-  function rowTotal(k,v){ return '<tr class="total"><td>'+k+'</td><td class="r">'+v+'</td></tr>'; }
-
-  ids.forEach(function(id){ $(id).addEventListener("input", calc); });
-  document.querySelectorAll(".chip").forEach(function(c){
-    c.addEventListener("click", function(){
-      $(c.dataset.set).value = c.dataset.val; calc();
+  var params=new URLSearchParams(location.search);
+  if(params.has("p")){
+    // VIEW MODE (shop): quote only
+    renderQuote({
+      item:params.get("i")||"", material:params.get("m")||"",
+      weight:+params.get("w")||0, gold:+params.get("g")||0,
+      labor:+params.get("lb")||0, misc:+params.get("mc")||0,
+      price:+params.get("p")||0, label:+params.get("l")||0, date:params.get("d")||""
     });
-  });
-  $("mWholesale").addEventListener("click", function(){ setMode("wholesale"); });
-  $("mConsign").addEventListener("click", function(){ setMode("consign"); });
-  $("curSel").addEventListener("change", function(){
-    cur = this.value;
-    document.querySelectorAll("[data-cur]").forEach(function(el){ el.textContent = cur; });
-    calc();
-  });
-
-  var lastSpot = null;
-  function fetchSpot(){
-    var out = $("fetchOut"), btn = $("fetchBtn");
-    btn.disabled = true; out.className = "fetchout"; out.textContent = "取得中…";
-    var ctrl = new AbortController();
-    var timer = setTimeout(function(){ ctrl.abort(); }, 8000);
-    fetch("https://data-asg.goldprice.org/dbXRates/JPY", { signal: ctrl.signal, cache: "no-store" })
-      .then(function(r){ if(!r.ok) throw new Error("http"); return r.json(); })
-      .then(function(d){
-        var oz = d && d.items && d.items[0] && d.items[0].xauPrice;
-        if(!oz) throw new Error("nodata");
-        var g = Math.round(oz / 31.1034768);
-        lastSpot = g;
-        var stamp = new Date().toLocaleTimeString("ja-JP", {hour:"2-digit", minute:"2-digit"});
-        out.className = "fetchout ok";
-        out.innerHTML = "スポット ¥" + g.toLocaleString("ja-JP") + "/g（税抜・国際・" + stamp + "） · <a href='#' id='applySpot'>この値を使う</a>";
-        $("applySpot").onclick = function(e){ e.preventDefault(); $("gold").value = g; calc(); };
-      })
-      .catch(function(){
-        out.className = "fetchout err";
-        out.innerHTML = "自動取得できませんでした。<a href='https://gold.tanaka.co.jp/commodity/souba/' target='_blank' rel='noopener'>田中で確認</a>して手入力を。";
-      })
-      .finally(function(){ clearTimeout(timer); btn.disabled = false; });
+  } else {
+    // EDITOR MODE (OtanO)
+    $("editor").style.display="";
+    function update(){var v=readInputs();renderQuote(v);$("sharelink").value=buildLink(v);}
+    ["item","material","weight","gold","labor","misc","price","pricelabel"].forEach(function(id){
+      $(id).addEventListener("input",update);$(id).addEventListener("change",update);
+    });
+    $("copyBtn").addEventListener("click",function(){
+      var f=$("sharelink");f.select();
+      var done=function(){$("copyBtn").textContent="コピー完了";setTimeout(function(){$("copyBtn").textContent="コピー";},1500);};
+      if(navigator.clipboard){navigator.clipboard.writeText(f.value).then(done,function(){document.execCommand("copy");done();});}
+      else{document.execCommand("copy");done();}
+    });
+    // spot fetch (editor only)
+    (function(){
+      var out=$("fetchOut"),btn=$("fetchBtn");
+      function go(){
+        btn.disabled=true;out.className="fetchout";out.textContent="取得中…";
+        var c=new AbortController();var t=setTimeout(function(){c.abort();},8000);
+        fetch("https://data-asg.goldprice.org/dbXRates/JPY",{signal:c.signal,cache:"no-store"})
+          .then(function(r){if(!r.ok)throw 0;return r.json();})
+          .then(function(d){var oz=d&&d.items&&d.items[0]&&d.items[0].xauPrice;if(!oz)throw 0;
+            var g=Math.round(oz/31.1034768);out.className="fetchout ok";
+            out.innerHTML="スポット ¥"+g.toLocaleString("ja-JP")+"/g · <a href='#' id='applySpot'>使う</a>";
+            $("applySpot").onclick=function(e){e.preventDefault();$("gold").value=g;update();};})
+          .catch(function(){out.className="fetchout err";
+            out.innerHTML="<a href='https://gold.tanaka.co.jp/commodity/souba/' target='_blank' rel='noopener'>田中で確認</a>して入力";})
+          .finally(function(){clearTimeout(t);btn.disabled=false;});
+      }
+      btn.addEventListener("click",go);go();
+    })();
+    update();
   }
-  $("fetchBtn").addEventListener("click", fetchSpot);
-  fetchSpot();
-
-  calc();
 })();
 </script>
-</body>
-</html>
+
+
+</body></html>
