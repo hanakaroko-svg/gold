@@ -87,11 +87,11 @@
       <div class="f"><label for="weight">重量（18金）</label><div class="iw"><input id="weight" type="number" value="110" min="0" step="1"><span class="unit">g</span></div></div>
       <div class="f">
         <label for="gold">純金グラム単価</label>
-        <div class="iw"><span class="cur">¥</span><input id="gold" class="pl" type="number" value="23000" min="0" step="10"><span class="unit">/g</span></div>
+        <div class="iw"><span class="cur">¥</span><input id="gold" class="pl" type="number" value="25000" min="0" step="10"><span class="unit">/g</span></div>
         <div class="fetchrow"><button type="button" id="fetchBtn" class="fetchbtn">相場を取得</button><span id="fetchOut" class="fetchout err"><a href="https://gold.tanaka.co.jp/commodity/souba/" target="_blank" rel="noopener">田中で確認</a>して入力</span></div>
       </div>
-      <div class="f"><label for="labor">工賃</label><div class="iw"><span class="cur">¥</span><input id="labor" class="pl" type="number" value="130000" min="0" step="1000"></div></div>
-      <div class="f"><label for="misc">送料・保険・マテリアルテスト・雑費</label><div class="iw"><span class="cur">¥</span><input id="misc" class="pl" type="number" value="36000" min="0" step="1000"></div></div>
+      <div class="f"><label for="labor">工賃</label><div class="iw"><span class="cur">¥</span><input id="labor" class="pl" type="number" value="150000" min="0" step="1000"></div></div>
+      <div class="f"><label for="misc">送料・保険・マテリアルテスト・雑費</label><div class="iw"><span class="cur">¥</span><input id="misc" class="pl" type="number" value="76000" min="0" step="1000"></div></div>
       <div class="f"><label for="price">ご提示価格</label><div class="iw"><span class="cur">¥</span><input id="price" class="pl" type="number" value="4280000" min="0" step="10000"></div></div>
       <div class="f"><label for="pricelabel">価格の名目</label>
         <select id="pricelabel">
@@ -101,25 +101,13 @@
         </select>
       </div>
     </div>
-    <div class="linkbox">
-      <label for="sharelink">ショップに送るリンク</label>
-      <div class="linkrow">
-        <input id="sharelink" type="text" readonly="">
-        <button type="button" class="copybtn" id="copyBtn">コピー</button>
-      </div>
-      <p class="linkhint">このリンクを開くと入力欄は表示されません（この画面はOtanOだけのものです）。GitHub Pagesに置いたうえでリンクを送ってください。</p>
-    </div>
+   
   </div>
 
   <div class="quote">
     <div class="brand">OtanO</div>
     <div class="qtitle">カスタムオーダー 価格のご提示</div>
     <div class="qitem" id="qItem"><b>Kusuma Necklace ／ 別注</b></div>
-    <div class="spec">
-      <div class="cell"><div class="k">素材</div><div class="v" id="sMaterial">K18WG（ホワイトゴールド）</div></div>
-      <div class="cell"><div class="k">重量</div><div class="v" id="sWeight">110 g</div></div>
-      <div class="cell"><div class="k">金相場</div><div class="v" id="sGold">純金 ¥23,000/g・2026/7/15</div></div>
-    </div>
     <table class="bd" id="bd"><tbody><tr><td>素材費（18金地金）<small>純金相当分・鋳造ロス込み。金相場により変動します</small></td><td class="r">¥2,158,470</td></tr><tr><td>工賃<small>鋳造・エナメル・石留め・メッキ 等</small></td><td class="r">¥130,000</td></tr><tr><td>送料・保険・マテリアルテスト・雑費</td><td class="r">¥36,000</td></tr><tr class="sum"><td>実費合計</td><td class="r">¥2,324,470</td></tr><tr><td>オリジナルデザイン・別注対応・ブランド価値</td><td class="r">¥1,955,531</td></tr></tbody></table>
     <div class="bar" id="bar" aria-hidden="true"><span class="seg-gold" style="width:50.43153037383178%"></span><span class="seg-cost" style="width:3.878504672897196%"></span><span class="seg-design" style="width:45.68996495327103%"></span></div>
     <div class="legend" id="legend"><span><i class="seg-gold"></i>地金 50%</span><span><i class="seg-cost"></i>工賃・諸費 4%</span><span><i class="seg-design"></i>デザイン・別注・ブランド 46%</span></div>
@@ -128,8 +116,7 @@
       <div class="v" id="qPrice">¥4,280,000</div>
       <div class="tax">表示は税別です。</div>
     </div>
-    <div class="note" id="qNote">本価格は、18金の地金・工賃・諸費に、オリジナルデザインと別注対応・ブランド価値を含めたものです。金相場は日々変動するため、<b>本お見積りはご提示日から3営業日間有効</b>とさせていただきます。ご入金確認後すみやかに地金を確保いたしますので、その後に金相場が高騰しても<b>追加のご請求は発生いたしません</b>。</div>
-  </div>
+     </div>
 </div>
 
 <script>
