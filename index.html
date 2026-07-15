@@ -79,7 +79,7 @@
 <div class="sheet">
 
   <div class="editor" id="editor" style="">
-    <p class="tag">Setup — OtanO専用</p>
+    <p class="tag">Setup</p>
     <p class="tagsub">数値を入れると、下の「ショップに送るリンク」が自動で更新されます。そのリンクを送ると、相手には入力欄のない見積だけが表示され、書き換えできません。</p>
     <div class="frow">
       <div class="f full"><label for="item">品目名</label><input id="item" type="text" value="Kusuma Necklace ／ 別注"></div>
@@ -95,7 +95,7 @@
       <div class="f"><label for="price">ご提示価格</label><div class="iw"><span class="cur">¥</span><input id="price" class="pl" type="number" value="4280000" min="0" step="10000"></div></div>
       <div class="f"><label for="pricelabel">価格の名目</label>
         <select id="pricelabel">
-          <option value="0" selected="">卸値（OtanOお支払い額）</option>
+          <option value="0" selected="">卸値</option>
           <option value="1">ご提示価格</option>
           <option value="2">定価（店頭価格）</option>
         </select>
@@ -157,9 +157,7 @@
     $("pLabel").textContent=LABELS_SHORT[v.label]||"ご提示価格";
     $("qPrice").textContent=yen(v.price);
     $("qNote").innerHTML=
-      "本価格は、18金の地金・工賃・諸費に、オリジナルデザインと別注対応・ブランド価値を含めたものです。"+
-      "金相場は日々変動するため、<b>本お見積りはご提示日から3営業日間有効</b>とさせていただきます。"+
-      "ご入金確認後すみやかに地金を確保いたしますので、その後に金相場が高騰しても<b>追加のご請求は発生いたしません</b>。";
+    
   }
 
   function readInputs(){
